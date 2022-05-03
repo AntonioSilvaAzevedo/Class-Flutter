@@ -14,6 +14,14 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Column(children: [
+          ListTile(
+            title: Text('Inicio'),
+            subtitle: Text('Tela de inicio'),
+          )
+        ]),
+      ),
       appBar: AppBar(
         title: Text('Home Page'),
         actions: [
@@ -32,6 +40,11 @@ class HomePageState extends State<HomePage> {
             CustomSwitcher(),
             Container(
               height: 50,
+            ),
+            Image.asset(
+              'assets/images/1843.png',
+              width: 220,
+              height: 220,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
